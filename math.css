@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #ecf0f1;
+}
+
+#content {
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#display {
+    position: relative;
+    padding-top: 60px;
+}
+
+/* >>> TIMER */
+#timer {
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+}
+
+#timer.active {
+    -webkit-animation: tmr 7s forwards;
+    animation: tmr 7s forwards;
+}
+
+@-webkit-keyframes tmr {
+    from {width: 280px;}
+    to {width: 0;}
+}
+
+@keyframes tmr {
+    from {width: 280px;}
+    to {width: 0;}
+}
+
+
+/* <<< TIMER */
+
+/* >>> GAME OVER DISPLAY */
+#game-over-display {
+    position: absolute;
+    padding: 20px;
+    width: 200px;
+    left: 50px;
+    background-color: #34495E;
+    transition: all 0.5s ease;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#game-over-display h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#game-over-display.off-screen {
+    top: -200px;
+}
+
+#game-over-display.on-screen {
+    top: 100px;
+}
+
+#play-again-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin-top: 15px;
+    background-color: transparent;
+}
+/* <<< GAME OVER DISPLAY */
+
+#score-display {
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 10;
+    right: 0;
+}
+
+h1 {
+
+    font-size: 70px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+/* BUTTONS */
+.btn {
+    width: 136px;
+    height: 136px;
+    padding: 0;
+    margin-top: 70px;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+#correct-btn {
+    background-image: url('https://s3-us-west-2.amazonaws.com/vretta-interview-assets/checkmark.png');
+}
+
+#correct-btn:hover {
+    background-image: url('https://s3-us-west-2.amazonaws.com/vretta-interview-assets/checkmark_onhover.png');
+}
+
+#incorrect-btn {
+    background-image: url('https://s3-us-west-2.amazonaws.com/vretta-interview-assets/xmark.png');
+}
+
+#incorrect-btn:hover {
+    background-image: url('https://s3-us-west-2.amazonaws.com/vretta-interview-assets/xmark_onhover.png');
+}
